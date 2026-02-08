@@ -1,23 +1,23 @@
 {
-  "version": 2,
-  "outputDirectory": "public",
-  "functions": {
+"version": 2,
+"outputDirectory": "public",
+"functions": {
     "api/*.php": {
-      "runtime": "vercel-php@0.6.0"
+"runtime": "vercel-php@0.6.0"
     }
-  },
-  "routes": [
+},
+"routes": [
     {
-      "src": "/build/(.*)",
-      "dest": "/public/build/$1"
+    "src": "/build/(.*)",
+    "dest": "/public/build/$1"
     },
     {
-      "src": "/(css|js|images|favicon.ico|robots.txt)(.*)",
-      "dest": "/public/$1$2"
+    "src": "/(css|js|images|favicon.ico|robots.txt)(.*)",
+    "dest": "/public/$1$2"
     },
     {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
+    "src": "/(.*)",
+    "dest": "/api/index.php"
     }
-  ]
+]
 }
